@@ -1,6 +1,6 @@
 # Project Farley
 
-In-browser Particle System
+In-browser Particle System. Can be viewed at https://timteeling.github.io/project-farley/public/
 
 ### Install
 
