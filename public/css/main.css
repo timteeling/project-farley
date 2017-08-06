@@ -1,0 +1,126 @@
+/**
+ * Resets
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/**
+ * Document
+ */
+
+body {
+  font-family: system-ui, -apple-system, 'segoe ui', roboto, sans-serif;
+  background: radial-gradient(#fff, #aaa);
+  height: 100vh;
+  overflow: hidden;
+  color: #333;
+}
+
+/**
+ * Container around the Canvas
+ */
+
+.container { /* Shared styles, we only swap out the image in each mode */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mode-snow {
+  background-image: url('../img/snow.jpg'), radial-gradient(#d0c8d2, #8da2b8); /* show gradient while image loads */
+}
+
+.mode-rain {
+  background-image: url('../img/rain.jpg'), linear-gradient(#50616e, #475d6c, #3e483b); /* show gradient while image loads */
+}
+
+/**
+ * Control bar that houses play & mode control buttons
+ */
+
+.controls {
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
+}
+
+/**
+ * Button styles
+ */
+
+.btn {
+  color: #fff;
+  padding: 0.5em 1em;
+  background: rgba(0, 0, 0, 0.25);
+  border: 0.125em solid rgba(255, 255, 255, 0.125);
+  border-radius: 0.25em;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.25);
+  outline: 0;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.btn:hover {
+  background: rgba(0, 0, 0, 0.375);
+  box-shadow: 0 1em 1.5em rgba(0, 0, 0, 0.25);
+  transform: scale(1.1);
+}
+
+.btn:focus {
+  box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
+}
+
+.btn-active {
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.btn svg {
+  position: relative;
+  top: -0.125em;
+  fill: #fff;
+}
+
+/**
+ * Utilities
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/**
+ * Pay no attention to the man behind the curtain... nothing to see below
+ */
+
+.farley {
+  position: absolute;
+  top: 4em;
+  left: 50%;
+  width: 20em;
+  margin-left: -10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
